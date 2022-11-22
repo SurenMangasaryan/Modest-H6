@@ -30,3 +30,34 @@ for (let i = 0; i < inp.length; i++) {
 //         pages[i].style.height = "5px";
 //     })
 // }
+
+let a = document.querySelector(".section1-a");
+
+a.addEventListener("click", function(e){
+    a.style.top = "0px";
+    a.style.left = "30px"
+    e.preventDefault();
+});
+a.addEventListener("dblclick", function(e){
+    a.style.top = "153px";
+    a.style.left = "30px"
+    e.preventDefault();
+});
+
+
+let btn = document.querySelector(".section5-btn");
+let inps = document.querySelectorAll(".section5-inps");
+let s5Div = document.querySelector(".section5-div");
+
+btn.addEventListener("click", function(e){
+    e.preventDefault();
+    for (let i = 0; i < inps.length; i++) {
+        if (inps.value !== "") {
+            s5Div.style.left = "50%";
+        }
+    }
+});
+
+s5Div.addEventListener("click", function(){
+    s5Div.style.left = "150%";
+});
